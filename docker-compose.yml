@@ -21,7 +21,7 @@ services:
       - ./setup/roles:/roles:ro,Z
       - setup:/state:Z
     environment:
-      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
+      ELASTIC_PASSWORD: elastic123
       LOGSTASH_INTERNAL_PASSWORD: ${LOGSTASH_INTERNAL_PASSWORD:-}
       KIBANA_SYSTEM_PASSWORD: ${KIBANA_SYSTEM_PASSWORD:-}
       METRICBEAT_INTERNAL_PASSWORD: ${METRICBEAT_INTERNAL_PASSWORD:-}
@@ -51,7 +51,7 @@ services:
       # Bootstrap password.
       # Used to initialize the keystore during the initial startup of
       # Elasticsearch. Ignored on subsequent runs.
-      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
+      ELASTIC_PASSWORD: elastic123
       # Use single node discovery in order to disable production mode and avoid bootstrap checks.
       # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       discovery.type: single-node
